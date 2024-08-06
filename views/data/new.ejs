@@ -1,0 +1,54 @@
+<%= layout("/layouts/boilerplate.ejs") %>
+  <div class="row">
+    <div class="col-8 offset-2">
+      <br><br>
+    <h2>CREATE NEW LISTINGS</h2>
+    <form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+      <input name="listing[title]" type="text" placeholder="Add a catchy title" class="form-control" required>
+      <div class="valid-feedback">Good Title</div>
+      <div class="invalid-feedback">Pleace Enter Title</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">description</label>
+        <textarea name="listing[description]" type="text"  class="form-control" required></textarea>
+      <div class="invalid-feedback">Pleace Enter description</div>
+      </div>
+
+
+
+      <div class="mb-3">
+        <label for="image" class="form-label">Uplod listing image</label>
+        <input name="listing[image]" required  class="form-control" type="file">
+        <div class="valid-feedback">Good image</div>
+        <div class="invalid-feedback">Pleace Enter image link</div>  
+      </div>
+
+      <div class="row">
+        <div class="mb-3 col-md-4">
+          <label for="price" class="form-label">price</label>
+          <input type="number" name="listing[price]" required placeholder="1200" class="form-control">
+          <div class="valid-feedback">Good price</div>
+      <div class="invalid-feedback">Pleace Enter price</div>
+        </div>
+  
+        <div class="mb-3 col-md-8">
+          <label for="country" class="form-label">country</label>
+          <input type="text" name="listing[country]" required placeholder="india" class="form-control"> 
+          <div class="invalid-feedback">Pleace Enter country</div>
+        </div> 
+      </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label">location</label>
+        <input type="text" name="listing[location]" required placeholder="Niphad,Nashik" class="form-control"> 
+      <div class="invalid-feedback">Pleace Enter location</div>
+      </div> 
+<br><br>
+      <button class="btn btn-dark add-btn">Add
+      </button><br><br>
+    </form>
+  </div>
+</div>
